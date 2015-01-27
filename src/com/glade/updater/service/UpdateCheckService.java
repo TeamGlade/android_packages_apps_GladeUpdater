@@ -7,7 +7,7 @@
  * or at https://www.gnu.org/licenses/gpl-2.0.txt
  */
 
-package com.cyanogenmod.updater.service;
+package com.glade.updater.service;
 
 import android.app.IntentService;
 import android.app.Notification;
@@ -27,15 +27,15 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.VolleyLog;
 
-import com.cyanogenmod.updater.R;
-import com.cyanogenmod.updater.UpdateApplication;
-import com.cyanogenmod.updater.requests.UpdatesJsonObjectRequest;
-import com.cyanogenmod.updater.UpdatesSettings;
-import com.cyanogenmod.updater.misc.Constants;
-import com.cyanogenmod.updater.misc.State;
-import com.cyanogenmod.updater.misc.UpdateInfo;
-import com.cyanogenmod.updater.receiver.DownloadReceiver;
-import com.cyanogenmod.updater.utils.Utils;
+import com.glade.updater.R;
+import com.glade.updater.UpdateApplication;
+import com.glade.updater.requests.UpdatesJsonObjectRequest;
+import com.glade.updater.UpdatesSettings;
+import com.glade.updater.misc.Constants;
+import com.glade.updater.misc.State;
+import com.glade.updater.misc.UpdateInfo;
+import com.glade.updater.receiver.DownloadReceiver;
+import com.glade.updater.utils.Utils;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -57,11 +57,11 @@ public class UpdateCheckService extends IntentService
     private static final boolean TESTING_DOWNLOAD = false;
 
     // request actions
-    public static final String ACTION_CHECK = "com.cyanogenmod.gladeupdater.action.CHECK";
-    public static final String ACTION_CANCEL_CHECK = "com.cyanogenmod.gladeupdater.action.CANCEL_CHECK";
+    public static final String ACTION_CHECK = "com.glade.gladeupdater.action.CHECK";
+    public static final String ACTION_CANCEL_CHECK = "com.glade.gladeupdater.action.CANCEL_CHECK";
 
     // broadcast actions
-    public static final String ACTION_CHECK_FINISHED = "com.cyanogenmod.gladeupdater.action.UPDATE_CHECK_FINISHED";
+    public static final String ACTION_CHECK_FINISHED = "com.glade.gladeupdater.action.UPDATE_CHECK_FINISHED";
     // extra for ACTION_CHECK_FINISHED: total amount of found updates
     public static final String EXTRA_UPDATE_COUNT = "update_count";
     // extra for ACTION_CHECK_FINISHED: amount of updates that are newer than what is installed
